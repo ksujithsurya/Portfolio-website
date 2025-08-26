@@ -1,131 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <meta name="description" content="A simple portfolio website showcasing my skills and projects."/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujith Surya - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #444;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills li {
+      background: #eee;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 40px;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="container nav">
-      <a href="#" class="brand">My Portfolio</a>
-      <button id="menuBtn" aria-label="Toggle menu" class="menu-btn">☰</button>
-      <ul id="navList" class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <header>
+    <div class="header-container">
+      <img src="profile.jpg" alt="Sujith Surya" class="profile-pic">
+      <h1>👋 Hi, I'm Sujith Surya</h1>
+      <p>Web Development Enthusiast | HTML | CSS | JavaScript</p>
+    </div>
   </header>
 
-  <main>
-    <section id="home" class="section hero">
-      <div class="container grid-2">
-        <div>
-          <h1>Hello, I'm <span class="accent" id="yourName">Your Name</span></h1>
-          <p class="lead">Aspiring Web Developer. I build clean, responsive websites.</p>
-          <div class="cta-row">
-            <a href="#projects" class="btn">View Projects</a>
-            <a href="#contact" class="btn outline">Contact Me</a>
-          </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <img src="assets/profile.svg" alt="Profile art placeholder"/>
-        </div>
-      </div>
-    </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I recently completed the Agnirava Web Development program. This portfolio demonstrates
-          my skills in HTML, CSS, and JavaScript. I enjoy learning, building UI components, and
-          turning ideas into real, usable web pages.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="section tint">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul class="chips">
-          <li>HTML5</li>
-          <li>CSS3 (Flexbox, Grid)</li>
-          <li>JavaScript (ES6)</li>
-          <li>Responsive Design</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Portfolio Website</h3>
-            <p>A clean, responsive personal portfolio built with HTML, CSS, and vanilla JS.</p>
-            <div class="card-actions">
-              <a href="#" aria-disabled="true" class="btn small disabled">Live Demo</a>
-              <a href="#" aria-disabled="true" class="btn small outline disabled">Source</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Task List App</h3>
-            <p>A simple to-do list with local storage. Add, mark done, and remove tasks.</p>
-            <div class="card-actions">
-              <a href="#" aria-disabled="true" class="btn small disabled">Live Demo</a>
-              <a href="#" aria-disabled="true" class="btn small outline disabled">Source</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Weather Widget</h3>
-            <p>Lightweight widget UI for showing weather for a chosen city (mock data).</p>
-            <div class="card-actions">
-              <a href="#" aria-disabled="true" class="btn small disabled">Live Demo</a>
-              <a href="#" aria-disabled="true" class="btn small outline disabled">Source</a>
-            </div>
-          </article>
-        </div>
-        <p class="hint">You can replace the above placeholders with your own project links later.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section tint">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me for collaboration or opportunities.</p>
-        <form id="contactForm" class="contact-form" action="mailto:yourname@example.com" method="post" enctype="text/plain">
-          <label>
-            Name
-            <input type="text" name="name" required/>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required/>
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button class="btn" type="submit">Send Message</button>
-        </form>
-        <p class="hint">Tip: edit the email address in <code>index.html</code> to your own before publishing.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Your Name — Portfolio</p>
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>
+        I am <strong>Sujith Surya</strong>, a passionate web development enthusiast. 
+        I have recently completed the <strong>Agnirava Web Development program</strong> 
+        where I learned HTML, CSS, and JavaScript. 
+        I enjoy building responsive websites and continuously improving my skills.
+      </p>
     </div>
+  </section>
+
+  <section id="skills">
+    <div class="card skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li>✅ HTML - Strong knowledge</li>
+        <li>✅ CSS - Styling & Responsive Design</li>
+        <li>✅ JavaScript - Interactive Web Development</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <p>Here are some projects I have worked on during my learning journey:</p>
+      <ul>
+        <li>🌐 Responsive Portfolio Website</li>
+        <li>🎨 CSS Layout & Design Showcase</li>
+        <li>⚡ JavaScript Mini Projects (Calculator, To-Do App, etc.)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:ksujithsurya@gmail.com">ksujithsurya@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sujith Surya. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
